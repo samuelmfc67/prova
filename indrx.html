@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despesas pessoais</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <section class="banner-context">
+            <h1>Despesas pessoais</h1>
+            <p>Vamos organizar</p>
+            <nav>
+                <a href="#alimentacao">Alimentação</a>
+                <a href="#transporte">Transporte</a>
+                <a href="#contas">Contas</a>
+                <a href="#outros">Outros</a>
+            </nav>
+        </section>
+    </header>
+
+    <main>
+        <section class="adicionar-despesa">
+            <h2>Adicionar Despesa</h2>
+            <form id="form-despesa">
+                <select id="categoria">
+                    <option value="">Selecione a categoria</option>
+                    <option value="alimentacao">Alimentação</option>
+                    <option value="transporte">Transporte</option>
+                    <option value="contas">Contas</option>
+                    <option value="outros">Outros</option>
+                </select>
+                <input type="text" id="descricao" placeholder="Descrição da despesa" required>
+                <input type="number" id="valor" step="0.01" placeholder="Valor" required>
+                <button type="submit">Adicionar</button>
+            </form>
+        </section>
+
+        <section class="despesas">
+            <h2>Despesas por Categoria</h2>
+            <div id="alimentacao" class="categoria">
+                <h3>Alimentação</h3>
+                <ul class="lista-despesas"></ul>
+                <p class="total-categoria">Total: R$ 0.00</p>
+            </div>
+            <div id="transporte" class="categoria">
+                <h3>Transporte</h3>
+                <ul class="lista-despesas"></ul>
+                <p class="total-categoria">Total: R$ 0.00</p>
+            </div>
+            <div id="contas" class="categoria">
+                <h3>Contas</h3>
+                <ul class="lista-despesas"></ul>
+                <p class="total-categoria">Total: R$ 0.00</p>
+            </div>
+            <div id="outros" class="categoria">
+                <h3>Outros</h3>
+                <ul class="lista-despesas"></ul>
+                <p class="total-categoria">Total: R$ 0.00</p>
+            </div>
+        </section>
+
+        <section class="total-geral">
+            <h2>Total Geral de Despesas</h2>
+            <p id="total-geral">Total: R$ 0.00</p>
+        </section>
+
+        <section class="remover-despesas">
+            <h2>Remover Despesas</h2>
+            <ul id="lista-todas-despesas"></ul>
+            <button id="remover-selecionadas">Remover Selecionadas</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

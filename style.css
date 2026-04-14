@@ -1,0 +1,304 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(124, 176, 223);
+}
+
+/* Remove arrows from number inputs */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+header {
+    background-color: rgb(92, 220, 224);
+    color: aquamarine;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.banner-context {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.banner-context h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.banner-context p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background-color: rgb(218, 221, 42);
+}
+
+nav a:hover {
+    background-color: rgb(200, 200, 42);
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    width: 88%;
+}
+
+.adicionar-despesa {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.adicionar-despesa h2 {
+    color: rgb(218, 205, 36);
+    margin-bottom: 1rem;
+}
+
+#form-despesa {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#form-despesa select,
+#form-despesa input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+    min-width: 150px;
+}
+
+#form-despesa button {
+    padding: 0.5rem 1rem;
+    background-color: rgb(218, 205, 36);
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#form-despesa button:hover {
+    background-color: rgb(200, 200, 42);
+}
+
+.despesas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.categoria {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.categoria h3 {
+    color: rgb(218, 205, 36);
+    border-bottom: 2px solid rgb(218, 205, 36);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.lista-despesas {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.lista-despesas li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-categoria {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.total-geral {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.total-geral h2 {
+    color: rgb(218, 205, 36);
+    margin-bottom: 1rem;
+}
+
+#total-geral {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(218, 205, 36);
+}
+
+.remover-despesas {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.remover-despesas h2 {
+    color: rgb(218, 205, 36);
+    margin-bottom: 1rem;
+}
+
+#lista-todas-despesas {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+#lista-todas-despesas li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+#lista-todas-despesas li input {
+    margin-right: 0.5rem;
+}
+
+#remover-selecionadas {
+    padding: 0.5rem 1rem;
+    background-color: rgb(218, 205, 36);
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#remover-selecionadas:hover {
+    background-color: rgb(200, 200, 42);
+}
+
+#limpar-tudo {
+    padding: 0.5rem 1rem;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+#limpar-tudo:hover {
+    background-color: #d32f2f;
+}
+
+.produto {
+    background-color: aliceblue;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.preço {
+    font-weight: bold;
+    color: #ff9000;
+    margin-bottom: 1rem;
+}
+
+.adicionar {
+    background-color: #4caf50;
+    color: aliceblue;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#pedido {
+    background-color: azure;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+#lista-pedido {
+    list-style: none;
+    padding: 0;
+}
+
+#finalizar-pedido {
+    background-color: #ffca28;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contato {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.redes-socias a {
+    display: inline-block;
+    background-color: #ffca28;
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 0.5rem;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    main {
+        width: 60%;
+    }
+}
+
+
+
